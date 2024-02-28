@@ -14,7 +14,14 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   body{
-    font-family: sans-serif;
+    
+    font-family: "Space Grotesk", sans-serif;
+    max-width: 1200px;
+    margin-inline: auto;
+    /* background-image: url('/assets/images/bg-main-mobile.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%; */
   }
 
   a{
