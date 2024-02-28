@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
-	gap: .5rem;
+	gap: 0.4rem;
 	padding-bottom: 1.875rem;
 	padding-inline: 1rem;
 	width: 100%;
@@ -21,14 +21,14 @@ const StyledTextsLabel = styled.label`
 
 const StyledErrorSpan = styled.span`
 	color: red;
-	font-size: 0.7rem;
+	font-size: 0.6rem;
 	/* padding-right: .75rem; */
 `;
 
 const StyledCardNameContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.3rem;
 `;
 
 const StyledInputCardName = styled.input`
@@ -44,7 +44,7 @@ const StyledInputCardName = styled.input`
 const StyledCardNumberContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	gap: 0.3rem;
 `;
 
 const StyledInputCardNumber = styled.input`
@@ -63,46 +63,63 @@ const StyledCardDetailsContainer = styled.div`
 `;
 
 const StyledMonthYearsContainer = styled.div`
-	/* display: flex; */
-	/* flex-direction: column; */
-	/* width: 40%; */
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	width: 50%;
 `;
 
 const StyledInputsMonthYearContainer = styled.div`
 	display: flex;
+	/* flex-direction: column; */
 	gap: 0.7rem;
 `;
 
+const SytledInputMonthContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+`;
+
 const StyledInputMonth = styled.input`
- 	width: 4rem;
- 	margin-right: .5rem;
- 	height: 1.875rem;
- 	border-radius: 8px;
- 	border: none;
- 	border: 1px solid purple;
- 	outline: none;
- 	text-align: center;
-// 	@media screen and (min-width: 64rem) {
-// 		width: 4.375rem;
-// 	}
+	width: 4rem;
+	height: 1.875rem;
+	border-radius: 8px;
+	border: none;
+	border: 1px solid purple;
+	outline: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	// 	@media screen and (min-width: 64rem) {
+	// 		width: 4.375rem;
+	// 	}
+`;
+
+const StyledInputYearContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
 `;
 
 const StyledInputYear = styled.input`
- 	width: 4rem;
- 	margin-right: .5rem;
- 	height: 1.875rem;
- 	border-radius: 8px;
- 	border: none;
- 	border: 1px solid purple;
- 	outline: none;
- 	text-align: center;
-// 	@media screen and (min-width: 64rem) {
-// 		width: 4.375rem;
-// 	}
+	width: 4rem;
+	height: 1.875rem;
+	border-radius: 8px;
+	border: none;
+	border: 1px solid purple;
+	outline: none;
+	text-align: center;
+	// 	@media screen and (min-width: 64rem) {
+	// 		width: 4.375rem;
+	// 	}
 `;
 
 const StyledCvcContainer = styled.div`
-	/* width: 60%; */
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	width: 50%;
 `;
 
 const StyledInputCvc = styled.input`
@@ -124,7 +141,7 @@ const StyledButton = styled.button`
 	border: none;
 	color: #fff;
 	height: 2.8125rem;
-	border-radius: .5rem;
+	border-radius: 0.5rem;
 	font-size: 1.1rem;
 	margin-top: 1rem;
 	/* @media screen and (min-width: 64rem) {
@@ -143,7 +160,9 @@ export {
 	StyledCardDetailsContainer,
 	StyledMonthYearsContainer,
 	StyledInputsMonthYearContainer,
+	SytledInputMonthContainer,
 	StyledInputMonth,
+	StyledInputYearContainer,
 	StyledInputYear,
 	StyledCvcContainer,
 	StyledInputCvc,
