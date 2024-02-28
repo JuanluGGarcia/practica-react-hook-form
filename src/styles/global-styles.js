@@ -5,7 +5,7 @@ export const GlobalStyles = createGlobalStyle`
   *::after,
   *::before{
     box-sizing: border-box;
-    margin: 0;
+    
   }
 
   img{
@@ -15,9 +15,11 @@ export const GlobalStyles = createGlobalStyle`
   
   body{
     
+    margin: 0;
     font-family: "Space Grotesk", sans-serif;
-    max-width: 1200px;
+    max-width: 800px;
     margin-inline: auto;
+
     /* background-image: url('/assets/images/bg-main-mobile.png');
     background-repeat: no-repeat;
     background-position: top;

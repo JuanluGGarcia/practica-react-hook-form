@@ -4,61 +4,64 @@ const StyledAside = styled.aside`
 	background-image: url('/assets/images/bg-main-mobile.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 240px;
-	padding-inline: 16px;
-	padding-top: 32px;
-`;
-
-const StyledFrontCard = styled.div`
-	background-image: url('public/assets/images/bg-card-front.png');
-	background-repeat: no-repeat;
-	background-size: cover;
-	width: 285px;
-	height: 156.208px;
-	color: #fff;
-	position: absolute;
-	top: 120px;
-	padding: 20px;
-`;
-
-const StyledFrontCardImg = styled.img`
-	width: 54px;
-	height: auto;
-	margin-bottom: 37px;
-`;
-
-const StyledFrontCardNumber = styled.span`
-	font-size: 18px;
-`;
-
-const StyledFrontCardDiv = styled.div`
-	font-size: 9px;
-	text-transform: uppercase;
-	letter-spacing: 1.286px;
-	margin-top: 17px;
-	display: flex;
-	justify-content: space-between;
+	height: 15rem;
+	padding-inline: 1rem;
+	padding-top: 2rem;
+	margin-bottom: 4rem;
 `;
 
 const StyledBackCard = styled.div`
 	background-image: url('public/assets/images/bg-card-back.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 285px;
-	height: 156.208px;
+	width: 17.8125rem;
+	height: 9.8125rem;
 	margin-left: auto;
 	position: relative;
 `;
 
+const StyledFrontCard = styled.div`
+	background-image: url('public/assets/images/bg-card-front.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 17.8125rem;
+	height: 9.8125rem;
+	color: #fff;
+	position: absolute;
+	top: 8rem;
+	padding: 1.25rem;
+`;
+
+const StyledFrontCardImg = styled.img`
+	width: 3.375rem;
+	height: auto;
+	margin-bottom: 2.3125rem;
+`;
+
+const StyledFrontCardNumber = styled.span`
+	font-size: 1.125rem;
+`;
+
+const StyledFrontCardDiv = styled.div`
+	font-size: .5625rem;
+	text-transform: uppercase;
+	letter-spacing: .0804rem;
+	margin-top: 1.0625rem;
+	display: flex;
+	justify-content: space-between;
+`;
+
+
+
 const StyledBackCardSpan = styled.span`
 	position: absolute;
-	right: 40px;
-	top: 70px;
+	right: 2.5rem;
+	top: 4.375rem;
 	color: #fff;
 	text-align: right;
-	font-size: 9px;
+	font-size: .5625rem;
 	font-weight: 500;
-	letter-spacing: 1.286px;
+	letter-spacing: .0804rem;
 	text-transform: uppercase;
 `;
 

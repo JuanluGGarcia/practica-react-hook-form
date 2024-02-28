@@ -1,15 +1,19 @@
 import {
-	StyledButton,
-	StyledContainersInput,
-	StyledContainersLabels,
-	StyledContainersNameNumber,
-	StyledErrorContainer,
-	StyledErrorSpan,
 	StyledForm,
+	StyledTextsLabel,
+	StyledErrorSpan,
+	StyledCardNameContainer,
+	StyledInputCardName,
+	StyledCardNumberContainer,
+	StyledInputCardNumber,
+	StyledCardDetailsContainer,
+	StyledMonthYearsContainer,
+	StyledInputsMonthYearContainer,
 	StyledInputMonth,
 	StyledInputYear,
-	StyledInputs,
-	StyledTextsLabel
+	StyledCvcContainer,
+	StyledInputCvc,
+	StyledButton,
 } from './styles';
 import { FORM_VALIDATIONS } from '../../constants/form-validations';
 import { useForm } from 'react-hook-form';
@@ -23,73 +27,80 @@ const Form = () => {
 
 	return (
 		<StyledForm onSubmit={handleSubmit(formSubmit)}>
-			<StyledContainersInput>
+			{/* Card Name */}
+			<StyledCardNameContainer>
 				<StyledTextsLabel htmlFor='name'>CARDHOLDER NAME</StyledTextsLabel>
-				<StyledInputs
+				<StyledInputCardName
 					type='text'
 					id='name'
 					name='name'
+					placeholder='Jane Appleseed'
 					{...register('name', FORM_VALIDATIONS.NAME)}
 				/>
-				{errors && errors.name && (
-					<StyledErrorSpan>{errors.name.message}</StyledErrorSpan>
-				)}
-			</StyledContainersInput>
-			<StyledContainersInput>
+				<StyledErrorSpan>{errors?.errors.name?.message}</StyledErrorSpan>
+			</StyledCardNameContainer>
+
+			{/* Card Number */}
+			<StyledCardNumberContainer>
 				<StyledTextsLabel htmlFor='card_number'>CARD NUMBER</StyledTextsLabel>
-				<StyledInputs
+				<StyledInputCardNumber
 					type='number'
 					id='card_number'
 					name='card_number'
+					placeholder='e.g. 1234 5678 9123 0000'
 					maxLength={16}
 					{...register('card_number', FORM_VALIDATIONS.CARD_NUMBER)}
 				/>
-				{errors && errors.card_number && (
-					<StyledErrorSpan>{errors.card_number.message}</StyledErrorSpan>
-				)}
-			</StyledContainersInput>
-			<StyledContainersNameNumber>
-				<StyledTextsLabel htmlFor='month'>EXP.DATE(MM/YY)</StyledTextsLabel>
-				<StyledTextsLabel htmlFor='cvc'>CVC</StyledTextsLabel>
-			</StyledContainersNameNumber>
-			<StyledContainersLabels>
-				<StyledErrorContainer>
-					<StyledInputMonth
-						type='text'
-						id='card_month'
-						name='card_month'
-						maxLength={2}
-						{...register('card_month', FORM_VALIDATIONS.CARD_MONTH)}
-					/>
-					{errors && errors.card_month && (
-						<StyledErrorSpan>{errors.card_month.message}</StyledErrorSpan>
-					)}
-				</StyledErrorContainer>
-				<StyledErrorContainer>
-					<StyledInputYear
-						type='text'
-						id='card_year'
-						name='card_year'
-						maxLength={2}
-						{...register('card_year', FORM_VALIDATIONS.CARD_YEAR)}
-					/>
-					{errors && errors.card_year && (
-						<StyledErrorSpan>{errors.card_year.message}</StyledErrorSpan>
-					)}
-				</StyledErrorContainer>
-				<StyledErrorContainer>
-					<StyledInputs
+				<StyledErrorSpan>{errors?.card_number?.message}</StyledErrorSpan>
+			</StyledCardNumberContainer>
+
+			{/* Month, Year and Cvc */}
+			<StyledCardDetailsContainer>
+				{/* Month, Year */}
+				<StyledMonthYearsContainer>
+					<StyledTextsLabel htmlFor='month'>EXP.DATE (MM/YY)</StyledTextsLabel>
+					<StyledInputsMonthYearContainer>
+						{/* input month */}
+						<StyledInputMonth
+							type='text'
+							id='card_month'
+							name='card_month'
+							placeholder='MM'
+							maxLength={2}
+							{...register('card_month', FORM_VALIDATIONS.CARD_MONTH)}
+						/>
+						<StyledErrorSpan>{errors?.card_month?.message}</StyledErrorSpan>
+
+						{/* input year */}
+						<StyledInputYear
+							type='text'
+							id='card_year'
+							name='card_year'
+							placeholder='YY'
+							maxLength={2}
+							{...register('card_year', FORM_VALIDATIONS.CARD_MONTH)}
+						/>
+						<StyledErrorSpan>{errors?.card_year.message}</StyledErrorSpan>
+					</StyledInputsMonthYearContainer>
+				</StyledMonthYearsContainer>
+
+				{/* cvc */}
+				<StyledCvcContainer>
+					<StyledTextsLabel htmlFor='cvc'>CVC</StyledTextsLabel>
+
+					<StyledInputCvc
 						type='text'
 						id='cvc'
 						name='card_cvc'
+						placeholder='e.g. 123'
 						maxLength={3}
 						{...register('card_cvc', FORM_VALIDATIONS.CARD_CVC)}
 					/>
-					{errors && errors.card_cvc && (
-						<StyledErrorSpan>{errors.card_cvc.message}</StyledErrorSpan>
-					)}
-				</StyledErrorContainer>
-			</StyledContainersLabels>
+					<StyledErrorSpan>{errors?.card_cvc?.message}</StyledErrorSpan>
+				</StyledCvcContainer>
+			</StyledCardDetailsContainer>
+
+			
 			<StyledButton>Confirm</StyledButton>
 		</StyledForm>
 	);

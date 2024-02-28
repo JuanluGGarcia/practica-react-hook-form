@@ -3,69 +3,119 @@ import styled from 'styled-components';
 const StyledForm = styled.form`
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
-	padding-bottom: 30px;
+	gap: .5rem;
+	padding-bottom: 1.875rem;
+	padding-inline: 1rem;
 	width: 100%;
-	@media screen and (min-width: 1024px) {
+	@media screen and (min-width: 64rem) {
 		width: 20%;
 	}
 `;
 
-const StyledContainersInput = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 13px;
+const StyledTextsLabel = styled.label`
+	color: #21092f;
+	font-weight: bold;
+	letter-spacing: 0.1rem;
+	/* margin: 0; */
 `;
 
-const StyledInputs = styled.input`
+const StyledErrorSpan = styled.span`
+	color: red;
+	font-size: 0.7rem;
+	/* padding-right: .75rem; */
+`;
+
+const StyledCardNameContainer = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+`;
+
+const StyledInputCardName = styled.input`
 	border: none;
-	border: 1px solid #4b0082;
-	border-radius: 10px;
-	height: 30px;
+	padding-inline: 1rem;
+	border: 1px solid purple;
+	border-radius: 8px;
+	height: 1.875rem;
 	outline: none;
 	width: 100%;
 `;
 
-const StyledContainersNameNumber = styled.div`
+const StyledCardNumberContainer = styled.div`
 	display: flex;
-	width: 100%;
-	font-size: 0.8em;
-	gap: 15px;
+	flex-direction: column;
+	gap: 0.5rem;
 `;
 
-const StyledContainersLabels = styled.div`
-	display: flex;
+const StyledInputCardNumber = styled.input`
+	border: none;
+	padding-inline: 1rem;
+	border: 1px solid purple;
+	border-radius: 8px;
+	height: 1.875rem;
+	outline: none;
 	width: 100%;
-	gap: 5px;
-	padding-bottom: 20px;
+`;
 
-	@media screen and (min-width: 1024px) {
-		justify-content: space-between;
-	}
+const StyledCardDetailsContainer = styled.div`
+	display: flex;
+	gap: 1rem;
+`;
+
+const StyledMonthYearsContainer = styled.div`
+	/* display: flex; */
+	/* flex-direction: column; */
+	/* width: 40%; */
+`;
+
+const StyledInputsMonthYearContainer = styled.div`
+	display: flex;
+	gap: 0.7rem;
 `;
 
 const StyledInputMonth = styled.input`
-	width: 43px;
-	height: 30px;
-	border-radius: 10px;
-	border: none;
-	border: 1px solid #4b0082;
-	outline: none;
-	@media screen and (min-width: 1024px) {
-		width: 70px;
-	}
+ 	width: 4rem;
+ 	margin-right: .5rem;
+ 	height: 1.875rem;
+ 	border-radius: 8px;
+ 	border: none;
+ 	border: 1px solid purple;
+ 	outline: none;
+ 	text-align: center;
+// 	@media screen and (min-width: 64rem) {
+// 		width: 4.375rem;
+// 	}
 `;
 
 const StyledInputYear = styled.input`
-	width: 43px;
-	height: 30px;
-	border-radius: 10px;
+ 	width: 4rem;
+ 	margin-right: .5rem;
+ 	height: 1.875rem;
+ 	border-radius: 8px;
+ 	border: none;
+ 	border: 1px solid purple;
+ 	outline: none;
+ 	text-align: center;
+// 	@media screen and (min-width: 64rem) {
+// 		width: 4.375rem;
+// 	}
+`;
+
+const StyledCvcContainer = styled.div`
+	/* width: 60%; */
+`;
+
+const StyledInputCvc = styled.input`
+	width: 100%;
+	padding-inline: 1rem;
+	height: 1.875rem;
+	border-radius: 8px;
 	border: none;
-	border: 1px solid #4b0082;
+	border: 1px solid purple;
 	outline: none;
-	@media screen and (min-width: 1024px) {
-		width: 70px;
-	}
+	/* @media screen and (min-width: 64rem) {
+		width: 4.375rem;
+	} */
 `;
 
 const StyledButton = styled.button`
@@ -73,41 +123,29 @@ const StyledButton = styled.button`
 	background-color: #21092f;
 	border: none;
 	color: #fff;
-	height: 45px;
-	border-radius: 8px;
-	font-size: 1.1em;
-	@media screen and (min-width: 1024px) {
+	height: 2.8125rem;
+	border-radius: .5rem;
+	font-size: 1.1rem;
+	margin-top: 1rem;
+	/* @media screen and (min-width: 64rem) {
 		cursor: pointer;
-	}
-`;
-
-const StyledErrorSpan = styled.span`
-	color: red;
-	font-size: 0.8em;
-	padding-right: 12px;
-`;
-
-const StyledErrorContainer = styled.div`
-	display: flex;
-	flex-direction: column;
-`;
-
-const StyledTextsLabel = styled.label`
-	color: #21092f;
-	font-weight: bold;
-	letter-spacing: 0.1em;
+	} */
 `;
 
 export {
 	StyledForm,
-	StyledContainersInput,
-	StyledContainersLabels,
-	StyledContainersNameNumber,
+	StyledTextsLabel,
+	StyledErrorSpan,
+	StyledCardNameContainer,
+	StyledInputCardName,
+	StyledCardNumberContainer,
+	StyledInputCardNumber,
+	StyledCardDetailsContainer,
+	StyledMonthYearsContainer,
+	StyledInputsMonthYearContainer,
 	StyledInputMonth,
 	StyledInputYear,
-	StyledInputs,
-	StyledButton,
-	StyledErrorSpan,
-	StyledErrorContainer,
-	StyledTextsLabel
+	StyledCvcContainer,
+	StyledInputCvc,
+	StyledButton
 };
