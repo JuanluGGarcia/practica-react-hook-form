@@ -15,20 +15,24 @@ import {
 	StyledInputYear,
 	StyledCvcContainer,
 	StyledInputCvc,
-	StyledButton,
+	StyledButton
 } from './styles';
 
 import { FORM_VALIDATIONS } from '../../constants/form-validations';
 import { useForm } from 'react-hook-form';
+import Cards from '../cards/Cards';
 
 const Form = () => {
 	const {
 		handleSubmit,
 		register,
+		watch,
 		formState: { errors }
 	} = useForm({ mode: 'onChange' });
 
-	// console.log(errors)
+	const formValues = watch();
+
+	<Cards formValues={formValues} />;
 
 	return (
 		<StyledForm onSubmit={handleSubmit(formSubmit)}>

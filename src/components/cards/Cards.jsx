@@ -10,15 +10,15 @@ import {
 	StyledFrontCardNumber
 } from './styles';
 
-const Cards = () => {
+const Cards = ({ formValues }) => {
 	return (
 		<StyledAside>
 			<StyledBackCard>
-				<StyledBackCardSpan>000</StyledBackCardSpan>
+				<StyledBackCardSpan>{formValues.card_cvc || '000'}</StyledBackCardSpan>
 			</StyledBackCard>
 			<StyledFrontCard>
 				<StyledFrontCardImg src='assets/images/card-logo.svg' alt='' />
-				<StyledFrontCardNumber>0000 0000 0000 0000</StyledFrontCardNumber>
+				<StyledFrontCardNumber>{formatCreditNumber(formValues.card_number) || '0000 0000 0000 0000'}</StyledFrontCardNumber>
 				<StyledFrontCardDiv>
 					<span>Jane Appleseed</span>
 					<span>00/00</span>
@@ -26,13 +26,13 @@ const Cards = () => {
 			</StyledFrontCard>
 		</StyledAside>
 
-		// <StyledCardsContainer>
-		//     <StyledCardBack>
-		//     <StyleCardBackSegNumber>000</StyleCardBackSegNumber>
-		//     </StyledCardBack>
-		//     <StyledCardFront></StyledCardFront>
-		// </StyledCardsContainer>
+		
 	);
 };
-//
+
+const formatCreditNumber = creditCardNumber => {
+	if (!creditCardNumber) return;
+	return creditCardNumber.match(/.{1,4}/g).join(' ');
+};
+
 export default Cards;
