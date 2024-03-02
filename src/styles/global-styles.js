@@ -18,7 +18,14 @@ export const GlobalStyles = createGlobalStyle`
     font-family: "Space Grotesk", sans-serif;
     background-image: url('/assets/images/bg-main-mobile.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100% 250px;
+
+    @media screen and (min-width: 750px) {
+      background-image: url('/assets/images/bg-main-desktop.png');
+      background-repeat: no-repeat;
+      background-size: 350px;
+      height: 100vh 100%;
+    }
     /* max-width: 800px; */
     /* margin-inline: auto; */
     

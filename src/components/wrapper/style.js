@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-	@media screen and (min-width: 40.625rem) {
-	 		display: flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+
+	@media screen and (min-width: 750px) {
+	 		flex-direction: row;
 			justify-content: center;
-			align-items: center;
+			/* align-items: center; */
 			gap: 3rem;
 			
 	}

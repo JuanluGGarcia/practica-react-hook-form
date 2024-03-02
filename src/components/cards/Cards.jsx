@@ -4,6 +4,7 @@ import {
 	StyledCardBack,
 	StyledCardBackCvcSpan,
 	StyledCardFront,
+	StyledCardFrontLogo,
 	StyledCardFrontNumberSpan,
 	StyledCardFrontDetails,
 	StyledCardFrontNameSpan,
@@ -29,8 +30,8 @@ const Cards = ({ formValues }) => {
 			<StyledCardBack>
 				<StyledCardBackCvcSpan>000</StyledCardBackCvcSpan>
 			</StyledCardBack>
-
 			<StyledCardFront>
+				<StyledCardFrontLogo src="/assets/images/card-logo.svg" />
 				<StyledCardFrontNumberSpan>
 					0000 0000 0000 0000
 				</StyledCardFrontNumberSpan>
@@ -43,6 +44,8 @@ const Cards = ({ formValues }) => {
 					</div>
 				</StyledCardFrontDetails>
 			</StyledCardFront>
+			
+
 		</StyledCardsContainer>
 		// <StyledAside>
 		// 	<StyledBackCard>

@@ -1,14 +1,21 @@
 import styled from 'styled-components';
 
 const StyledCardsContainer = styled.div`
-	/* background-image: url('/assets/images/bg-main-mobile.png'); */
-	background-repeat: no-repeat;
-	width: 100%;
-	background-size: 100% 15.375rem;
-	padding: 1.5rem 2rem;
-	margin-bottom: 0;
+	padding: 2rem;
+	position: relative;
+	/* background-color: orange; */
+	margin-bottom: 140px;
 
 	@media screen and (min-width: 750px) {
+		height: 100vh;
+		width: 50%;
+		margin: 0;
+		/* padding: 3rem; */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
 	}
 `;
 const StyledCardFront = styled.div`
@@ -18,24 +25,26 @@ const StyledCardFront = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	width: 21rem;
 	max-width: 25rem;
 	height: 12rem;
 	border-radius: 10px;
 	color: #fff;
-	position: relative;
-	padding: 2rem;
-	top: -5.5rem;
-	right: 1rem;
+	position: absolute;
+	padding: 32px;
+	left: 1rem;
+	top: 150px;
 
-	&::after {
-		content: url(/assets/images/card-logo.svg);
+	@media screen and (min-width: 750px) {
+		left: 8rem;
+		top: 80px;
+	}
+`;
+
+const StyledCardFrontLogo = styled.img`
 		position: absolute;
 		top: 1.6875rem;
 		left: 1.6875rem;
-	}
-
-	@media screen and (max-width: 46.875rem) {
-	}
 `;
 
 const StyledCardFrontNumberSpan = styled.span`
@@ -52,47 +61,47 @@ const StyledCardFrontDetails = styled.div`
 	word-spacing: 6px;
 `;
 
-const StyledCardFrontNameSpan = styled.span``;
-const StyledCardFrontMonthSpan = styled.span``;
-const StyledCardFrontYearSpan = styled.span``;
-
 const StyledCardBack = styled.div`
 	background-image: url(/assets/images/bg-card-back.png);
-	background-size: contain;
+	background-size: cover;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: end;
+    /* width: inherit; */
+	width: 21rem;
 	max-width: 25rem;
-	height: 12rem;
-	border-radius: 10px;
-	color: #fff;
-	position: relative;
-	padding: 3rem;
-	top: 0;
+    height: 12rem;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+    padding: 32px;
 	left: 1rem;
 
-	@media screen and (max-width: 46.875rem) {
-		/* margin: 1rem 2rem 1rem auto; */
-		/* position: absolute; */
-		/* width: inherit; */
-		/* z-index: 10; */
-		/* top: 10rem; */
+	@media screen and (min-width: 750px) {
+		top: 120px;
+		left: 4rem;
+
 	}
 `;
 
 const StyledCardBackCvcSpan = styled.span`
-	/* position: absolute;
-	right: 3.75rem;
-	top: 6.8125rem;
-	font-size: 1.5rem; */
+	position: absolute;
+	right: 3rem;
+	top: 5rem;
+	font-size: 1.5rem;
 `;
+
+
+
+const StyledCardFrontNameSpan = styled.span``;
+const StyledCardFrontMonthSpan = styled.span``;
+const StyledCardFrontYearSpan = styled.span``;
+
+
 
 export {
 	StyledCardsContainer,
 	StyledCardFront,
+	StyledCardFrontLogo,
 	StyledCardFrontNumberSpan,
 	StyledCardFrontDetails,
 	StyledCardFrontNameSpan,
