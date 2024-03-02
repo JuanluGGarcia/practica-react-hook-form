@@ -24,7 +24,7 @@ const messages = {
 
 const patterns = {
 	onlyLetters: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/,
-	onlyNumbers: /^[ 0-9]$/,
+	onlyNumbers: /^[0-9]+$/,
 	creditCardNumber: /^[0-9]{16}$/
 };
 
