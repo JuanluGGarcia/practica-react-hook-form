@@ -6,7 +6,7 @@ const StyledCardsContainer = styled.div`
 	/* background-color: orange; */
 	margin-bottom: 140px;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		height: 100vh;
 		width: 50%;
 		margin: 0;
@@ -15,7 +15,6 @@ const StyledCardsContainer = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		
 	}
 `;
 const StyledCardFront = styled.div`
@@ -35,16 +34,16 @@ const StyledCardFront = styled.div`
 	left: 1rem;
 	top: 150px;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		left: 8rem;
 		top: 80px;
 	}
 `;
 
 const StyledCardFrontLogo = styled.img`
-		position: absolute;
-		top: 1.6875rem;
-		left: 1.6875rem;
+	position: absolute;
+	top: 1.6875rem;
+	left: 1.6875rem;
 `;
 
 const StyledCardFrontNumberSpan = styled.span`
@@ -66,20 +65,19 @@ const StyledCardBack = styled.div`
 	background-size: cover;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-    /* width: inherit; */
+	/* width: inherit; */
 	width: 21rem;
 	max-width: 25rem;
-    height: 12rem;
-    border-radius: 10px;
-    color: #fff;
-    position: relative;
-    padding: 32px;
+	height: 12rem;
+	border-radius: 10px;
+	color: #fff;
+	position: relative;
+	padding: 32px;
 	left: 1rem;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		top: 120px;
 		left: 4rem;
-
 	}
 `;
 
@@ -90,13 +88,9 @@ const StyledCardBackCvcSpan = styled.span`
 	font-size: 1.5rem;
 `;
 
-
-
 const StyledCardFrontNameSpan = styled.span``;
 const StyledCardFrontMonthSpan = styled.span``;
 const StyledCardFrontYearSpan = styled.span``;
-
-
 
 export {
 	StyledCardsContainer,

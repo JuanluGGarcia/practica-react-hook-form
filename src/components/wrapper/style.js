@@ -7,12 +7,11 @@ const StyledWrapper = styled.div`
 	margin: 0;
 	padding: 0;
 
-	@media screen and (min-width: 750px) {
-	 		flex-direction: row;
-			justify-content: center;
-			/* align-items: center; */
-			gap: 3rem;
-			
+	@media screen and (min-width: 900px) {
+		flex-direction: row;
+		justify-content: center;
+		/* align-items: center; */
+		gap: 3rem;
 	}
 `;
 

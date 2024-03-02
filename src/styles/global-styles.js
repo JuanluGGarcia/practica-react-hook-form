@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
     background-repeat: no-repeat;
     background-size: 100% 250px;
 
-    @media screen and (min-width: 750px) {
+    @media screen and (min-width: 900px) {
       background-image: url('/assets/images/bg-main-desktop.png');
       background-repeat: no-repeat;
       background-size: 350px;

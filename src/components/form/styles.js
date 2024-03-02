@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledForm = styled.form`
-
 	/* background-color: lightcoral; */
 	width: 100%;
 	display: flex;
@@ -10,11 +9,11 @@ const StyledForm = styled.form`
 	gap: 0.3rem;
 	/* align-items: center; */
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		width: 50%;
 		justify-content: center;
 		padding: 0 100px 0 0;
-		gap: 0.5rem;
+		gap: 0.8rem;
 	}
 `;
 
@@ -28,10 +27,10 @@ const StyledTextsLabel = styled.label`
 const StyledErrorSpan = styled.span`
 	color: red;
 	font-size: 0.6rem;
-	padding-right: .75rem;
+	padding-right: 0.75rem;
 
-	@media screen and (min-width: 750px) {
-		font-size: .8rem;	
+	@media screen and (min-width: 900px) {
+		font-size: 0.8rem;
 	}
 `;
 
@@ -43,17 +42,16 @@ const StyledCardNameContainer = styled.div`
 
 const StyledInputCardName = styled.input`
 	border: none;
-	padding: .8rem;
+	padding: 0.8rem;
 	border: 1px solid purple;
 	border-radius: 8px;
 	outline: none;
 	width: 100%;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		width: 85%;
-		font-size: 1rem;	
+		font-size: 1rem;
 	}
-
 `;
 
 const StyledCardNumberContainer = styled.div`
@@ -64,40 +62,46 @@ const StyledCardNumberContainer = styled.div`
 
 const StyledInputCardNumber = styled.input`
 	border: none;
-	padding: .8rem;
+	padding: 0.8rem;
 	border: 1px solid purple;
 	border-radius: 8px;
 	outline: none;
 	width: 100%;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		width: 85%;
-		font-size: 1rem;	
+		font-size: 1rem;
 	}
 `;
 
 const StyledCardDetailsContainer = styled.div`
 	display: flex;
-	gap: 1rem;
+	justify-content: space-between;
+	/* gap: 1rem; */
+
+	@media screen and (min-width: 900px) {
+		width: 85%;
+	}
 `;
 
 const StyledMonthYearsContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	/* gap: 0.3rem; */
-	width: 50%;
+	/* width: 50%; */
 
-	@media screen and (min-width: 750px) {
-		width: 41.5%;
-	}
+	/* @media screen and (min-width: 900px) {
+		width: 85%;
+	} */
 `;
 
 const StyledInputsMonthYearContainer = styled.div`
 	display: flex;
+	justify-content: space-between;
 	/* gap: 0.3rem; */
 
-	/* @media screen and (min-width: 750px) {
-		gap: 0.7rem;	
+	/* @media screen and (min-width: 900px) {
+		gap: 1rem;	
 	} */
 `;
 
@@ -109,7 +113,7 @@ const SytledInputMonthContainer = styled.div`
 
 const StyledInputMonth = styled.input`
 	width: 4rem;
-	padding: .8rem;
+	padding: 0.8rem;
 	/* height: 1.875rem; */
 	border-radius: 8px;
 	border: none;
@@ -118,8 +122,8 @@ const StyledInputMonth = styled.input`
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	
-	@media screen and (min-width: 750px) {
+
+	@media screen and (min-width: 900px) {
 		font-size: 1rem;
 	}
 `;
@@ -133,17 +137,16 @@ const StyledInputYearContainer = styled.div`
 const StyledInputYear = styled.input`
 	width: 4rem;
 	/* height: 1.875rem; */
-	padding: .8rem;
+	padding: 0.8rem;
 	border-radius: 8px;
 	border: none;
 	border: 1px solid purple;
 	outline: none;
 	text-align: center;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		font-size: 1rem;
 	}
-	
 `;
 
 const StyledCvcContainer = styled.div`
@@ -152,24 +155,23 @@ const StyledCvcContainer = styled.div`
 	/* gap: 0.3rem; */
 	width: 50%;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		width: 41%;
 	}
 `;
 
 const StyledInputCvc = styled.input`
 	width: 100%;
-	padding: .8rem;
+	padding: 0.8rem;
 	/* height: 1.875rem; */
 	border-radius: 8px;
 	border: none;
 	border: 1px solid purple;
 	outline: none;
 
-	@media screen and (min-width: 750px) {
+	@media screen and (min-width: 900px) {
 		font-size: 1rem;
 	}
-	
 `;
 
 const StyledButton = styled.button`
