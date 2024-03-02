@@ -19,26 +19,18 @@ import {
 } from './styles';
 
 import { FORM_VALIDATIONS } from '../../constants/form-validations';
-import { useForm } from 'react-hook-form';
-import Cards from '../cards/Cards';
+// import { useForm } from 'react-hook-form';
+// import Cards from '../cards/Cards';
 
-const Form = () => {
-	const {
-		handleSubmit,
-		register,
-		watch,
-		formState: { errors }
-	} = useForm({ mode: 'onChange' });
-
-	const formValues = watch();
-
-	<Cards formValues={formValues} />;
+const Form = ({ handleSubmit, register, errors }) => {
+	
+	// <Cards formValues={formValues} />;
 
 	return (
 		<StyledForm onSubmit={handleSubmit(formSubmit)}>
 			{/* Card Name */}
 			<StyledCardNameContainer>
-				<StyledTextsLabel htmlFor='name'>CARDHOLDER NAME</StyledTextsLabel>
+				<StyledTextsLabel htmlFor='card_name'>CARDHOLDER NAME</StyledTextsLabel>
 				<StyledInputCardName
 					type='text'
 					id='card_name'
@@ -53,7 +45,7 @@ const Form = () => {
 			<StyledCardNumberContainer>
 				<StyledTextsLabel htmlFor='card_number'>CARD NUMBER</StyledTextsLabel>
 				<StyledInputCardNumber
-					type='number'
+					type='text'
 					id='card_number'
 					name='card_number'
 					placeholder='e.g. 1234 5678 9123 0000'
@@ -124,44 +116,3 @@ const formSubmit = data => {
 
 export default Form;
 
-// import { useForm } from 'react-hook-form';
-// import { FORM_VALIDATIONS } from '../../constants/form-validations';
-
-// const Form = () => {
-// 	const {
-// 		handleSubmit,
-// 		register,
-// 		formState: { errors }
-// 	} = useForm({ mode: 'onChange' });
-// 	// Esta parte de arriba mode: 'onChange' es para validar sin pulsar el boton enviar
-// 	// console.log(errors);
-
-// 	return (
-// 		<form onSubmit={handleSubmit(formSubmit)}>
-// 			<div>
-// 				<label htmlFor='name'>NAME</label>
-// 				<input
-// 					type='text'
-// 					id='name'
-// 					name='name'
-// 					{...register('name', FORM_VALIDATIONS.NAME)}
-// 				/>
-// 				{/* {errors && errors.name && <span>{errors.name.message}</span>} */}
-// 				<span>{errors?.name?.message}</span>
-// 			</div>
-
-// 			<div>
-// 				<label htmlFor='email'>EMAIL</label>
-// 				<input type='text' id='email' name='email' {...register('email')} />
-// 			</div>
-
-// 			<input type='submit' value='SEND' />
-// 		</form>
-// 	);
-// };
-
-// const formSubmit = data => {
-// 	// console.log(data);
-// };
-
-// export default Form;
