@@ -6,7 +6,7 @@ const messages = {
 
 	cardNumber: {
 		required: 'The number is required',
-		wrong: 'Wrong format, numbers only'
+		wrong: "Incorrect credit card number"
 	},
 	cardMonth: {
 		required: "Can't be blank",
@@ -23,8 +23,8 @@ const messages = {
 };
 
 const patterns = {
-	onlyLetters: /^[a-z]+$/,
-	onlyNumbers: /^[0-9]$/,
+	onlyLetters: /^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/,
+	onlyNumbers: /^[ 0-9]$/,
 	creditCardNumber: /^[0-9]{16}$/
 };
 

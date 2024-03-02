@@ -36,6 +36,7 @@ const Form = ({ handleSubmit, register, errors }) => {
 					id='card_name'
 					name='card_name'
 					placeholder='Jane Appleseed'
+					maxLength={25}
 					{...register('card_name', FORM_VALIDATIONS.NAME)}
 				/>
 				<StyledErrorSpan>{errors?.card_name?.message}</StyledErrorSpan>

@@ -28,19 +28,19 @@ const Cards = ({ formValues }) => {
 		<StyledCardsContainer>
 
 			<StyledCardBack>
-				<StyledCardBackCvcSpan>000</StyledCardBackCvcSpan>
+				<StyledCardBackCvcSpan>{formValues.card_cvc || '000'}</StyledCardBackCvcSpan>
 			</StyledCardBack>
 			<StyledCardFront>
 				<StyledCardFrontLogo src="/assets/images/card-logo.svg" />
 				<StyledCardFrontNumberSpan>
-					0000 0000 0000 0000
+					{formatCreditNumber(formValues.card_number) || '0000 0000 0000 0000'}
 				</StyledCardFrontNumberSpan>
 				<StyledCardFrontDetails>
-					<StyledCardFrontNameSpan>Jane Appleseed</StyledCardFrontNameSpan>
+					<StyledCardFrontNameSpan>{formValues.card_name || 'Jane Appleseed'}</StyledCardFrontNameSpan>
 					<div>
-						<StyledCardFrontMonthSpan>00</StyledCardFrontMonthSpan>
+						<StyledCardFrontMonthSpan>{formValues.card_month || '00'}</StyledCardFrontMonthSpan>
 						<span>/</span>
-						<StyledCardFrontYearSpan>00</StyledCardFrontYearSpan>
+						<StyledCardFrontYearSpan>{formValues.card_year || '00'}</StyledCardFrontYearSpan>
 					</div>
 				</StyledCardFrontDetails>
 			</StyledCardFront>
@@ -63,9 +63,9 @@ const Cards = ({ formValues }) => {
 	);
 };
 
-// const formatCreditNumber = creditCardNumber => {
-// 	if (!creditCardNumber) return;
-// 	return creditCardNumber.match(/.{1,4}/g).join(' ');
-// };
+const formatCreditNumber = creditCardNumber => {
+	if (!creditCardNumber) return;
+	return creditCardNumber.match(/.{1,4}/g).join(' ');
+};
 
 export default Cards;
