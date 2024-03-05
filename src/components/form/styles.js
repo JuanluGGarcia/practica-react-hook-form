@@ -193,53 +193,53 @@ const StyledButton = styled.button`
 	
 `;
 
-const StyledThanks = styled.div`
-	visibility: hidden;
-	position: absolute;
-	top: 443px;
-	right: 0;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding-inline: 1.5rem;
-	gap: 0.3rem;
-	/* align-items: center; */
+// const StyledThanks = styled.div`
+// 	visibility: hidden;
+// 	position: absolute;
+// 	top: 443px;
+// 	right: 0;
+// 	width: 100%;
+// 	display: flex;
+// 	flex-direction: column;
+// 	justify-content: center;
+// 	align-items: center;
+// 	padding-inline: 1.5rem;
+// 	gap: 0.3rem;
+// 	/* align-items: center; */
 
-	@media screen and (min-width: 900px) {
-		position: absolute;
-		top: 180px;
-		right: 22px;
-		width: 50%;
-		justify-content: center;
-		padding: 0 100px 0 0;
-		gap: 0.8rem;
-	}
-`;
-const StyledThanksIcon = styled.img`
-	width: 5rem;
-	height: 5rem;
-`;
-const StyledThanksTitle = styled.h1``;
-const StyledThanksSubTitle = styled.p`
-	font-size: 1rem;
-`;
-const StyledThanksButton = styled.button`
-	width: 100%;
-	background-color: #21092f;
-	border: none;
-	color: #fff;
-	height: 2.8125rem;
-	border-radius: 0.5rem;
-	font-size: 1.1rem;
-	margin-block: 1rem;
-	cursor: pointer;
+// 	@media screen and (min-width: 900px) {
+// 		position: absolute;
+// 		top: 180px;
+// 		right: 22px;
+// 		width: 50%;
+// 		justify-content: center;
+// 		padding: 0 100px 0 0;
+// 		gap: 0.8rem;
+// 	}
+// `;
+// const StyledThanksIcon = styled.img`
+// 	width: 5rem;
+// 	height: 5rem;
+// `;
+// const StyledThanksTitle = styled.h1``;
+// const StyledThanksSubTitle = styled.p`
+// 	font-size: 1rem;
+// `;
+// const StyledThanksButton = styled.button`
+// 	width: 100%;
+// 	background-color: #21092f;
+// 	border: none;
+// 	color: #fff;
+// 	height: 2.8125rem;
+// 	border-radius: 0.5rem;
+// 	font-size: 1.1rem;
+// 	margin-block: 1rem;
+// 	cursor: pointer;
 
-	@media screen and (min-width: 900px) {
-		width: 80%;
-	}
-`;
+// 	@media screen and (min-width: 900px) {
+// 		width: 80%;
+// 	}
+// `;
 
 export {
 	StyledForm,
@@ -258,10 +258,10 @@ export {
 	StyledInputYear,
 	StyledCvcContainer,
 	StyledInputCvc,
-	StyledButton,
-	StyledThanks,
-	StyledThanksIcon,
-	StyledThanksTitle,
-	StyledThanksSubTitle,
-	StyledThanksButton
+	StyledButton
+	// StyledThanks,
+	// StyledThanksIcon,
+	// StyledThanksTitle,
+	// StyledThanksSubTitle,
+	// StyledThanksButton
 };

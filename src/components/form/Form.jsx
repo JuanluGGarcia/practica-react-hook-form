@@ -15,12 +15,12 @@ import {
 	StyledInputYear,
 	StyledCvcContainer,
 	StyledInputCvc,
-	StyledButton,
-	StyledThanks,
-	StyledThanksIcon,
-	StyledThanksTitle,
-	StyledThanksSubTitle,
-	StyledThanksButton
+	StyledButton
+	// StyledThanks,
+	// StyledThanksIcon,
+	// StyledThanksTitle,
+	// StyledThanksSubTitle,
+	// StyledThanksButton
 } from './styles';
 
 import { FORM_VALIDATIONS } from '../../constants/form-validations';
@@ -116,14 +116,14 @@ const Form = ({ handleSubmit, register, errors }) => {
 				<StyledButton>Confirm</StyledButton>
 			</StyledForm>
 
-			<StyledThanks>
+			{/* <StyledThanks>
 				<StyledThanksIcon src='/assets/images/icon-complete.svg' />
 				<StyledThanksTitle>THANK YOU</StyledThanksTitle>
 				<StyledThanksSubTitle>
 					We´ve added your card details
 				</StyledThanksSubTitle>
 				<StyledThanksButton>Continue</StyledThanksButton>
-			</StyledThanks>
+			</StyledThanks> */}
 		</>
 	);
 };
